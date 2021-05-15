@@ -110,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
+        android:onClick="alterarDados"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
@@ -118,7 +119,11 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
+<<<<<<< Updated upstream
         app:backgroundTint="#53D5B0" />
+=======
+        app:backgroundTint="#006400" />
+>>>>>>> Stashed changes
 
     <Button
         android:id="@+id/btnAlterExcluirDadosAluno"
@@ -126,6 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
+        android:onClick="excluirDados"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
@@ -134,7 +140,11 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
+<<<<<<< Updated upstream
         app:backgroundTint="#53D5B0" />
+=======
+        app:backgroundTint="#006400" />
+>>>>>>> Stashed changes
 
     <Button
         android:id="@+id/btnAlterVoltarAluno"
@@ -142,6 +152,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
+        android:onClick="voltar"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"

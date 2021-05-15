@@ -2,7 +2,9 @@ package com.example.cadastrarcursosealunos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -20,5 +22,16 @@ public class AlterarDadosAluno extends AppCompatActivity {
         btnAlterAlterarDadosAluno = findViewById(R.id.btnAlterAlterarDadosAluno);
         btnAlterExcluirDadosAluno = findViewById(R.id.btnAlterExcluirDadosAluno);
         btnAlterVoltarAluno = findViewById(R.id.btnAlterVoltarAluno);
+    }
+
+    public void alterarDados(View view) {
+    }
+
+    public void excluirDados(View view) {
+    }
+
+    public void voltar(View view) {
+        Intent it=new Intent(this,MenuActivity.class);
+        startActivity(it);
     }
 }
