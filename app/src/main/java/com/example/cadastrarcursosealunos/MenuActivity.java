@@ -3,7 +3,9 @@ package com.example.cadastrarcursosealunos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
     private Button btnMenuCadastrarCurso,btnMenuCadastrarAluno,
@@ -18,5 +20,8 @@ public class MenuActivity extends AppCompatActivity {
         btnMenuListarAlunos = findViewById(R.id.btnMenuListarAlunos);
         btnMenuAlterarDadosCurso = findViewById(R.id.btnMenuAlterarDadosCurso);
         btnMenuAlterarDadosAluno = findViewById(R.id.btnMenuAlterarDadosAluno);
+
     }
+
+   
 }

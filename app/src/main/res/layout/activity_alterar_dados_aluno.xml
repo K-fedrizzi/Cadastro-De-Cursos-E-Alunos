@@ -21,7 +21,7 @@
         android:id="@+id/textView8"
         android:layout_width="107dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="CPF"
         android:textSize="18sp"
         android:fontFamily="sans-serif-black"/>
@@ -48,7 +48,7 @@
         android:id="@+id/edtAlterNomeAluno"
         android:layout_width="295dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:hint="Informe seu nome"
         android:inputType="textPersonName" />
@@ -108,6 +108,7 @@
         android:id="@+id/btnAlterAlterarDadosAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
@@ -117,13 +118,13 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:backgroundTint="#006400"
-        android:layout_marginTop="10dp"/>
+        app:backgroundTint="#53D5B0" />
 
     <Button
         android:id="@+id/btnAlterExcluirDadosAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
@@ -133,13 +134,12 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:backgroundTint="#006400"
-        android:layout_marginTop="10dp"/>
+        app:backgroundTint="#53D5B0" />
 
     <Button
         android:id="@+id/btnAlterVoltarAluno"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
@@ -150,5 +150,5 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:backgroundTint="#006400" />
+        app:backgroundTint="#53D5B0" />
 </LinearLayout>

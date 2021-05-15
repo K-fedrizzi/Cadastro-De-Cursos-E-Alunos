@@ -120,7 +120,9 @@
         android:id="@+id/btnCadCadastrarAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
+        android:fontFamily="sans-serif-black"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
@@ -129,15 +131,15 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:backgroundTint="#006400"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-black"/>
+        app:backgroundTint="#53D5B0" />
 
     <Button
         android:id="@+id/btnCadVoltarAluno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttonshape"
+        android:fontFamily="sans-serif-black"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
@@ -146,9 +148,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:backgroundTint="#006400"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-black"/>
+        app:backgroundTint="#53D5B0" />
 
 
 </LinearLayout>
