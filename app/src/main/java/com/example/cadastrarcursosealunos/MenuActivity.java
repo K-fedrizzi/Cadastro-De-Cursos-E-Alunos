@@ -22,9 +22,6 @@ public class MenuActivity extends AppCompatActivity {
         btnMenuAlterarDadosCurso = findViewById(R.id.btnMenuAlterarDadosCurso);
         btnMenuAlterarDadosAluno = findViewById(R.id.btnMenuAlterarDadosAluno);
 
-<<<<<<< Updated upstream
-=======
-
     }
 
     public void cadastrarCurso(View view) {
@@ -50,7 +47,7 @@ public class MenuActivity extends AppCompatActivity {
     public void alterarDadosAluno(View view) {
         Intent it=new Intent(this,AlterarDadosAluno.class);
         startActivity(it);
->>>>>>> Stashed changes
+
     }
 
    
