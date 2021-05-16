@@ -9,7 +9,6 @@
     android:orientation="vertical"
     >
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="644dp"
@@ -36,8 +35,10 @@
                 android:id="@+id/btnMenuCadastrarCurso"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="sans-serif-black"
+                android:onClick="cadastrarCurso"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -46,8 +47,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                app:backgroundTint="#53D5B0"
-                android:layout_marginTop="50dp"/>
+                app:backgroundTint="#53D5B0" />
 
             <Button
                 android:id="@+id/btnMenuCadastrarAluno"
@@ -56,6 +56,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="sans-serif-black"
+                android:onClick="cadastrarAluno"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -73,6 +74,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="sans-serif-black"
+                android:onClick="listarAlunos"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -81,8 +83,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
-                app:backgroundTint="#53D5B0"
-               />
+                app:backgroundTint="#53D5B0" />
 
             <Button
                 android:id="@+id/btnMenuAlterarDadosCurso"
@@ -91,6 +92,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="sans-serif-black"
+                android:onClick="alterarDadosCurso"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
@@ -99,8 +101,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
-                app:backgroundTint="#53D5B0"
-              />
+                app:backgroundTint="#53D5B0" />
 
             <Button
                 android:id="@+id/btnMenuAlterarDadosAluno"
@@ -109,6 +110,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttonshape"
                 android:fontFamily="sans-serif-black"
+                android:onClick="alterarDadosAluno"
                 android:shadowColor="#A8A8A8"
                 android:shadowDx="0"
                 android:shadowDy="0"
