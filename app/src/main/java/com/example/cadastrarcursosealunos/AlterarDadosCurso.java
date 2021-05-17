@@ -15,18 +15,26 @@ public class AlterarDadosCurso extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alterar_dados_curso);
+
+        // Fazendo a ligação dos componentes da activity
         edtAlterCodCurso = findViewById(R.id.edtAlterCodCurso);
         edtAlterNomeCurso = findViewById(R.id.edtAlterNomeCurso);
         edtAlterQuatidadeHorasCurso = findViewById(R.id.edtAlterQuatidadeHorasCurso);
+
         btnAlterAlterarDadosCurso = findViewById(R.id.btnAlterAlterarDadosCurso);
         btnAlterExcluirDadosCurso = findViewById(R.id.btnAlterExcluirDadosCurso);
         btnAlterVoltarCurso = findViewById(R.id.btnAlterVoltarCurso);
-    }
 
-    public void excluirDados(View view) {
+        // capturando os atributos de cada componente
+        int codCurso = Integer.parseInt(edtAlterCodCurso.getText()+"");
+        String nomeCurso = edtAlterNomeCurso.getText()+"";
+        String horas = edtAlterQuatidadeHorasCurso.getText()+"";
     }
 
     public void alterarDados(View view) {
+    }
+
+    public void excluirDados(View view) {
     }
 
     public void voltar(View view) {
