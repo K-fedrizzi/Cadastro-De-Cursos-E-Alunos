@@ -153,10 +153,10 @@
 
         <Button
             android:id="@+id/btnAlterVoltarAluno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginLeft="240dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/buttonshape"
             android:onClick="voltar"
             android:shadowColor="#A8A8A8"
             android:shadowDx="0"

@@ -38,7 +38,7 @@
 
         <EditText
             android:id="@+id/edtAlterCodCurso"
-            android:layout_width="162dp"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -56,7 +56,7 @@
 
         <EditText
             android:id="@+id/edtAlterNomeCurso"
-            android:layout_width="158dp"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -65,7 +65,7 @@
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="wrap_content"
+            android:layout_width="295dp"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-black"
@@ -75,7 +75,7 @@
 
         <EditText
             android:id="@+id/edtAlterQuatidadeHorasCurso"
-            android:layout_width="match_parent"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
@@ -119,10 +119,9 @@
 
         <Button
             android:id="@+id/btnAlterVoltarCurso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-black"
             android:onClick="voltar"
             android:shadowColor="#A8A8A8"
@@ -133,7 +132,8 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:backgroundTint="#6AC4DF" />
+            app:backgroundTint="#6AC4DF"
+            android:layout_marginLeft="225dp"/>
 
     </LinearLayout>
 </LinearLayout>
