@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -12,15 +13,33 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnMenuCadastrarCurso,btnMenuCadastrarAluno,
             btnMenuListarAlunos,btnMenuAlterarDadosCurso,btnMenuAlterarDadosAluno;
 
+    TableCursoAlunoHelper bd = new TableCursoAlunoHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_main);
+
+        // Fazendo a ligação dos componentes da activity
         btnMenuCadastrarCurso = findViewById(R.id.btnMenuCadastrarCurso);
         btnMenuCadastrarAluno = findViewById(R.id.btnMenuCadastrarAluno);
         btnMenuListarAlunos = findViewById(R.id.btnMenuListarAlunos);
         btnMenuAlterarDadosCurso = findViewById(R.id.btnMenuAlterarDadosCurso);
         btnMenuAlterarDadosAluno = findViewById(R.id.btnMenuAlterarDadosAluno);
+
+        // Testando o CRUD
+        Aluno a = new Aluno();
+
+        a.setNomeAluno("Emerson");
+        a.setNomeCurso("teste123");
+        a.setCpf("071056838");
+        a.setEmail("curso@email.com");
+        a.setTelefone("DDD111111");
+        int id = bd.buscarIdCurso("Teste123");
+        /*Busca funcionando corretamente, faltando implementar o restante dos parametros*/
+        Log.d("ID_CURSO", ""+id);
+        /*bd.inserirAluno(a,a.getNomeCurso());
+        bd.close();*/
+
 
     }
 
@@ -49,6 +68,4 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(it);
 
     }
-
-   
 }

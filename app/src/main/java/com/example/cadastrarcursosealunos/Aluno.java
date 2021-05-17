@@ -2,14 +2,10 @@ package com.example.cadastrarcursosealunos;
 
 public class Aluno {
     private String nomeAluno;
-    private Curso curso;
+    private String nomeCurso;
     private String cpf;
     private String email;
     private String telefone;
-
-    // Construtor
-    public Aluno() {
-    }
 
     // Encapsulamento
     public String getNomeAluno() {
@@ -20,12 +16,12 @@ public class Aluno {
         this.nomeAluno = nomeAluno;
     }
 
-    public Curso getCurso() {
-        return curso;
+    public String getNomeCurso() {
+        return nomeCurso;
     }
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
+    public void setNomeCurso(String nomeCurso) {
+        this.nomeCurso = nomeCurso;
     }
 
     public String getCpf() {

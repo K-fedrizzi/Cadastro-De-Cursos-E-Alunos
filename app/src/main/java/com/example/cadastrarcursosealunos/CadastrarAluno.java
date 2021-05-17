@@ -20,16 +20,29 @@ public class CadastrarAluno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_aluno);
+
+        // Fazendo a ligação dos componentes da activity
         edtCadNomeAluno = findViewById(R.id.edtCadNomeAluno);
         edtCadCPFAluno = findViewById(R.id.edtCadCPFAluno);
         edtCadEmailAluno = findViewById(R.id.edtCadEmailAluno);
         edtCadTelefoneAluno = findViewById(R.id.edtCadTelefoneAluno);
+
         spinnCadCursoAluno = findViewById(R.id.spinnCadCursoAluno);
+
         btnCadCadastrarAluno = findViewById(R.id.btnCadCadastrarAluno);
         btnCadVoltarAluno = findViewById(R.id.btnCadVoltarAluno);
     }
 
     public void cadastrarAluno(View view) {
+        // capturando os atributos de cada componente
+        String nome  = edtCadNomeAluno.getText()+"";
+        String cpf   = edtCadCPFAluno.getText()+"";
+        String email = edtCadEmailAluno.getText()+"";
+        String tetefone = edtCadTelefoneAluno.getText()+"";
+
+
+        //int curso = spinnCadCursoAluno.getSelectedItemPosition();
+
     }
 
     public void voltar(View view) {

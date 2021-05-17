@@ -1,15 +1,8 @@
 package com.example.cadastrarcursosealunos;
 
 public class Curso {
-
-   private int idCurso;
    private String nomeCurso;
    private String quantHoras;
-
-    // Construtor
-    public Curso() {
-        /* buscar o ultimo id da tabela curso e incrementar o id */
-    }
 
     // Encapsulamento
     public String getNomeCurso() {
@@ -28,11 +21,4 @@ public class Curso {
         this.quantHoras = quantHoras;
     }
 
-    public int getIdCurso() {
-        return idCurso;
-    }
-
-    public void setIdCurso(int idCurso) {
-        this.idCurso = idCurso;
-    }
 }
