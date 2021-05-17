@@ -94,11 +94,11 @@ public class TableCursoAlunoHelper extends SQLiteOpenHelper {
     }
 
     /*Método para inserir um aluno*/
-    public void inserirAluno(Aluno a, String nomeCurso, int id){
+    public void inserirAluno(Aluno a, String nomeCurso){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values=new ContentValues();
-
-        values.put(cursoID,id);
+        /*Busca o id do curso pelo nome do curso*/
+        values.put(cursoID,buscarIdCurso(nomeCurso));
         values.put(nomeAluno,a.getNomeAluno());
         values.put(cpf,a.getCpf());
         values.put(email,a.getEmail());

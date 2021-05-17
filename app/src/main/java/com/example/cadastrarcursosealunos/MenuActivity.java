@@ -29,16 +29,14 @@ public class MenuActivity extends AppCompatActivity {
         // Testando o CRUD
         Aluno a = new Aluno();
 
-        a.setNomeAluno("Emerson");
-        a.setNomeCurso("teste123");
+        a.setNomeAluno("Karina");
+        a.setNomeCurso("Corte e Costura");
         a.setCpf("071056838");
         a.setEmail("curso@email.com");
         a.setTelefone("DDD111111");
-        int id = bd.buscarIdCurso("Teste123");
-        /*Busca funcionando corretamente, faltando implementar o restante dos parametros*/
-        Log.d("ID_CURSO", ""+id);
-        /*bd.inserirAluno(a,a.getNomeCurso());
-        bd.close();*/
+
+        bd.inserirAluno(a,a.getNomeCurso());
+        bd.close();
 
 
     }
