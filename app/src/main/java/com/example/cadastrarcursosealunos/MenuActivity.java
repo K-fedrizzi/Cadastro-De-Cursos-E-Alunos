@@ -13,7 +13,6 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnMenuCadastrarCurso,btnMenuCadastrarAluno,
             btnMenuListarAlunos,btnMenuAlterarDadosCurso,btnMenuAlterarDadosAluno;
 
-    TableCursoAlunoHelper bd = new TableCursoAlunoHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,20 +24,6 @@ public class MenuActivity extends AppCompatActivity {
         btnMenuListarAlunos = findViewById(R.id.btnMenuListarAlunos);
         btnMenuAlterarDadosCurso = findViewById(R.id.btnMenuAlterarDadosCurso);
         btnMenuAlterarDadosAluno = findViewById(R.id.btnMenuAlterarDadosAluno);
-
-        // Testando o CRUD
-        Aluno a = new Aluno();
-
-        a.setNomeAluno("Karina");
-        a.setNomeCurso("Corte e Costura");
-        a.setCpf("071056838");
-        a.setEmail("curso@email.com");
-        a.setTelefone("DDD111111");
-
-        bd.inserirAluno(a,a.getNomeCurso());
-        bd.close();
-
-
     }
 
     public void cadastrarCurso(View view) {

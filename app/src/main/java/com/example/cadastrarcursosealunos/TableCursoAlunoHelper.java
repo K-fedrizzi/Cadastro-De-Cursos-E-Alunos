@@ -9,6 +9,9 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TableCursoAlunoHelper extends SQLiteOpenHelper {
 
 
@@ -109,6 +112,46 @@ public class TableCursoAlunoHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public List<String> buscarCursos(){
+
+        SQLiteDatabase db=this.getReadableDatabase();
+        String query = "SELECT nomeCurso FROM curso";
+        Cursor cursor=db.rawQuery(query,null);
+
+        List<String> cursos = new ArrayList<String>();
+
+        if(cursor.moveToFirst()){
+            do{
+                String dado = cursor.getString(0)+"";
+                cursos.add(dado);
+            }while (cursor.moveToNext());
+        }
+        return cursos;
+    }
+
+    public List<String> buscarAlunos(){ ////////
+
+        SQLiteDatabase db=this.getReadableDatabase();
+        String query = "SELECT nomeAluno, cpf, email, telefone, cursoID  FROM aluno";
+
+        Cursor cursor=db.rawQuery(query,null);
+
+        List<String> alunos = new ArrayList<String>();
+
+        if(cursor.moveToFirst()){
+            do{
+                String dado = "Nome: "+cursor.getString(0)+"\n";
+                dado += "CPF: "+cursor.getString(1)+"\n";
+                dado += "EMAIL: "+cursor.getString(2)+"\n";
+                dado += "TELEFONE: "+cursor.getString(3)+"\n";
+                dado += "ID CURSO: "+cursor.getString(3)+"\n";
+                alunos.add(dado);
+                dado="";
+            }while (cursor.moveToNext());
+        }
+        return alunos;
+    }
+
 
     public int buscarIdCurso(String nomeCurso){
 
@@ -118,10 +161,8 @@ public class TableCursoAlunoHelper extends SQLiteOpenHelper {
 
 
         if(cursor.moveToFirst()){
-            //String nomeCursoTabela= cursor.getString(0);
             do{
                String nomeCursoTabela=cursor.getString(1);
-                Log.d("Curso", nomeCursoTabela);
                if(nomeCursoTabela.equals(nomeCurso)){
                    return cursor.getInt(0);
                }
