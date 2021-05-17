@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CadastrarAluno extends AppCompatActivity {
     private EditText edtCadNomeAluno, edtCadCPFAluno,
@@ -31,6 +35,16 @@ public class CadastrarAluno extends AppCompatActivity {
 
         btnCadCadastrarAluno = findViewById(R.id.btnCadCadastrarAluno);
         btnCadVoltarAluno = findViewById(R.id.btnCadVoltarAluno);
+
+        // Testando o Spinner
+        final List<String> cursos = new ArrayList<String>();
+        cursos.add("Curso 1");
+        cursos.add("Curso 2");
+        cursos.add("Curso 3");
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,cursos);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnCadCursoAluno.setAdapter(adapter);
     }
 
     public void cadastrarAluno(View view) {
