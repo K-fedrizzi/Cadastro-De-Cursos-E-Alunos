@@ -156,6 +156,7 @@
             android:id="@+id/btnCadVoltarAluno"
             android:layout_width="wrap_content"
             android:layout_height="58dp"
+            android:layout_marginLeft="210dp"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
             android:onClick="voltar"
@@ -167,8 +168,7 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:backgroundTint="#6AC4DF"
-            android:layout_marginLeft="225dp"/>
+            app:backgroundTint="#6AC4DF" />
 
 
     </LinearLayout>
