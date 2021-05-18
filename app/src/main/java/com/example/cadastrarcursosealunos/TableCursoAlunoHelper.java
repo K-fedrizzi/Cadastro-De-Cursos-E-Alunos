@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -16,7 +15,7 @@ public class TableCursoAlunoHelper extends SQLiteOpenHelper {
 
 
     private static final int DATABASE_VERSION = 4;
-    private static  final String DATABASE_NAME = "emerson05";
+    private static  final String DATABASE_NAME = "CursosOnline";
 
     /*variável que armazena o nome da Tabela dos cursos*/
     private static final String TABLE_CURSO = "curso";
@@ -169,6 +168,65 @@ public class TableCursoAlunoHelper extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
         }
         return -1;
+    }
+
+    public boolean buscarCPFaluno(String cpf){
+
+        SQLiteDatabase db=this.getReadableDatabase();
+        String query = "SELECT cpf FROM aluno";
+        Cursor cursor=db.rawQuery(query,null);
+
+
+        if(cursor.moveToFirst()){
+            do{
+                String dadoCPF=cursor.getString(0);
+                if(dadoCPF.equals(cpf)){
+                    return true;
+                }
+            }while (cursor.moveToNext());
+        }
+        return false;
+    }
+
+    public boolean alterarDadosCurso(String id, String nome, String qutdHoras){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(nomeCurso,nome);
+        values.put(qtdeHoras,qutdHoras);
+        db.update("curso",values,"cursoID = ?",new String[]{ id });
+        return true;
+    }
+
+    public boolean alterarDadosAluno(String nomeAluno, String cpf, String email, String telefone){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(this.nomeAluno,nomeAluno);
+        values.put(this.cpf,cpf);
+        values.put(this.email,email);
+        values.put(this.telefone,telefone);
+
+        db.update("aluno",values,"cpf = ?",new String[]{ cpf });
+        return true;
+    }
+
+    // Chave estrangeira não deixa o dado ser excluido
+    public boolean excluirCurso(String nome){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        db.delete("curso","nomeCurso=?",new String[]{ nome });
+
+        return true;
+    }
+
+    public boolean excluirAluno(String cpf){
+        SQLiteDatabase db=this.getWritableDatabase();
+
+        db.delete("aluno","cpf=?",new String[]{ cpf });
+
+        return true;
     }
 
 }
