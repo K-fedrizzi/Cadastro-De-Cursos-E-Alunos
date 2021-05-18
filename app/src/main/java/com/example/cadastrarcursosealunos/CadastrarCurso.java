@@ -42,7 +42,9 @@ public class CadastrarCurso extends AppCompatActivity {
 
         // Cadastrando o curso no BD
         cadCursoBD.inserirCurso(curso);
-        Log.d("myTag", "Curso Cadastrado!");
+
+        edtCadNomeCurso.setText("");
+        edtCadHoras.setText("");
         Toast toast=Toast.makeText(CadastrarCurso.this,"Curso Cadastrado com sucesso", Toast.LENGTH_LONG);
 
     }

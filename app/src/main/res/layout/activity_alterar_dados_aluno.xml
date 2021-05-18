@@ -64,22 +64,6 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/textView13"
-            android:layout_width="114dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Curso"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/spinnAlterCursoAluno"
-            android:layout_width="295dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
-
-        <TextView
             android:id="@+id/textView14"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
@@ -134,6 +118,16 @@
             android:textSize="18sp"
             app:backgroundTint="#6AC4DF" />
 
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para excluir informe acima apenas o cpf "
+            android:textAlignment="center"
+            android:textColor="#9C27B0"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"/>
+
         <Button
             android:id="@+id/btnAlterExcluirDadosAluno"
             android:layout_width="match_parent"
@@ -145,7 +139,7 @@
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="5"
-            android:text="Excluir Dados"
+            android:text="Excluir Aluno"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
